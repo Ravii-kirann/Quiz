@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
  
 const connectDB = async () =>{
     try {
-        await mongoose.connect("mongodb://localhost:27017/quizApp")
+        await mongoose.connect("mongodb+srv://ravikiranjayanthi5555:ravi12345@cluster0.wqlsyot.mongodb.net/")
         console.log("mongoDB connected Successfully")
     } catch (error) {
-        console.error('MongoDB connection error:', err);
+        console.error('MongoDB connection error:', error);
     process.exit(1); 
     }
 }

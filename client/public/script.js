@@ -4,7 +4,7 @@ let userAnswers = [];
 
 async function fetchQuestions() {
   try {
-    const response = await fetch('http://localhost:3000/api/quiz/questions');
+    const response = await fetch('https://quiz-au64.onrender.com/api/quiz/questions');
     questions = await response.json();
     displayQuestion();
   } catch (err) {
@@ -44,7 +44,7 @@ function nextQuestion() {
 
 async function calculateScore() {
   try {
-    const response = await fetch('http://localhost:3000/api/quiz/score', {
+    const response = await fetch('https://quiz-au64.onrender.com/api/quiz/score', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ questions, userAnswers }),
