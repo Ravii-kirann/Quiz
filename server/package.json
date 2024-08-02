@@ -1,0 +1,19 @@
+{
+  "name": "quiz_game",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.2",
+    "nodemon": "^3.1.4",
+    "socket.io": "^4.7.5"
+  }
+}

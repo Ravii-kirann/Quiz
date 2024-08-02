@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Multiplayer Quiz Game</h1>
+    <div id="lobby">
+      <button id="create-room">Create Room</button>
+      <input type="text" id="room-id-input" placeholder="Enter Room ID">
+      <button id="join-room">Join Room</button>
+      <p id="room-id-display"></p>
+    </div>
+    <div id="quiz-container" style="display: none;">
+      <div id="question-section">
+        <p id="question-text"></p>
+        <div id="answers"></div>
+        <button id="next-button" onclick="nextQuestion()" disabled>Next Question</button>
+      </div>
+      <p id="status"></p>
+    </div>
+    <div id="results" style="display: none;">
+      <h2>Results</h2>
+      <p id="result-text"></p>
+    </div>
+  </div>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
