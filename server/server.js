@@ -16,7 +16,7 @@ const io = socketIo(server);
 connectDB();
 
 app.use(express.json());
-app.use(cors({origin : "https://magnificent-malabi.netlify.app/"}));
+app.use(cors({origin : "https://stellar-travesseiro-e301ba.netlify.app/"}));
 
 
 app.use('/api/quiz', quizRoutes);
