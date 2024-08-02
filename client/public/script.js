@@ -60,6 +60,7 @@ async function calculateScore() {
 
 const socket = io('https://quiz-au64.onrender.com'); 
 
+
 let roomId = null;
 
 document.getElementById('create-room').addEventListener('click', () => {

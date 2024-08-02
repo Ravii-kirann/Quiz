@@ -11,12 +11,17 @@ require('dotenv').config();
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
-
+const corsOptions = {
+  origin: 'https://stellar-travesseiro-e301ba.netlify.app/', // Replace with your client's URL
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true
+};
 
 connectDB();
 
 app.use(express.json());
-app.use(cors({origin : "https://stellar-travesseiro-e301ba.netlify.app/"}));
+app.use(cors(corsOptions));
 
 
 app.use('/api/quiz', quizRoutes);
