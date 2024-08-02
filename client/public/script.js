@@ -58,9 +58,8 @@ async function calculateScore() {
   }
 }
 
-const socket = io(); // Initialize the connection
+const socket = io('https://quiz-au64.onrender.com'); 
 
-// Room management
 let roomId = null;
 
 document.getElementById('create-room').addEventListener('click', () => {
